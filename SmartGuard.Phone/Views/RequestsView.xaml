@@ -1,0 +1,50 @@
+﻿<views:MvxPhonePage
+    x:Class="SmartGuard.Phone.Views.RequestsView"
+    xmlns:views="clr-namespace:Cirrious.MvvmCross.WindowsPhone.Views;assembly=Cirrious.MvvmCross.WindowsPhone"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="False"
+     xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    xmlns:cmd="clr-namespace:Cirrious.MvvmCross.WindowsPhone.Commands;assembly=Cirrious.MvvmCross.WindowsPhone"
+    xmlns:local="clr-namespace:SmartGuard.Phone">
+
+    <Grid>
+        <Grid.Resources>
+            <local:ConvertVisibility x:Key="Convert"/>
+        </Grid.Resources>
+        <phone:Pivot Title="{Binding AppResources.RequestsView_Title,
+        Source={StaticResource Global}}"
+                     Name="myPivot">
+            <phone:PivotItem 
+                Header="{Binding AppResources.RequestsView_PivotIncoming_Title,
+            Source={StaticResource Global}}">
+                <ListBox Name="lstIncoming"
+                ItemsSource="{Binding FriendsRequests}"
+                SelectedItem="{Binding SelectedFriend, Mode=TwoWay}"
+                     ItemTemplate="{StaticResource lstRequests}">
+                </ListBox>
+            </phone:PivotItem>
+
+            <phone:PivotItem Header="{Binding AppResources.RequestsView_PivotOutgoing_Title,
+            Source={StaticResource Global}}">
+                <ListBox Name="lstOutgoing"
+                ItemsSource="{Binding MyRequests}"
+                SelectedItem="{Binding SelectedFriend, Mode=TwoWay}"
+                     ItemTemplate="{StaticResource lstRequests}"/>
+            </phone:PivotItem>
+        </phone:Pivot>
+        <ProgressBar IsIndeterminate="True"
+                     Height="100"
+                     Width="400"
+                     Visibility="{Binding HaventUploaded, Converter={StaticResource Convert}}"/>
+    </Grid>
+</views:MvxPhonePage>

@@ -1,0 +1,42 @@
+﻿<views:MvxPhonePage
+    x:Class="SmartGuard.Phone.Views.RateView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    xmlns:cmd="clr-namespace:Cirrious.MvvmCross.WindowsPhone.Commands;assembly=Cirrious.MvvmCross.WindowsPhone"
+    xmlns:views="clr-namespace:Cirrious.MvvmCross.WindowsPhone.Views;assembly=Cirrious.MvvmCross.WindowsPhone"
+    shell:SystemTray.IsVisible="False">
+
+
+    <phone:Pivot Title="{Binding AppResources.ApplicationTitle, 
+        Source={StaticResource Global}}">
+        <phone:PivotItem Header="{Binding AppResources.RateView_Pivot_Title, 
+        Source={StaticResource Global}}">
+            <StackPanel>
+                <ScrollViewer Height="450">
+                    <TextBlock Text="{Binding AppResources.RateView_Txt_Explanation,
+                Source={StaticResource Global}}"
+                        TextWrapping="Wrap"
+                               FontSize="23"/>
+                </ScrollViewer>
+                
+                <Button Name="btnRate" Margin="0,30,0,0"
+                    Content="{Binding AppResources.RateView_Btn_RateMe,
+                    Source={StaticResource Global}}"/>
+
+                <Button Name="btnSurvey"
+                    Content="{Binding AppResources.RateView_Btn_Survey,
+                    Source={StaticResource Global}}"/>
+            </StackPanel>
+        </phone:PivotItem>
+    </phone:Pivot>
+</views:MvxPhonePage>

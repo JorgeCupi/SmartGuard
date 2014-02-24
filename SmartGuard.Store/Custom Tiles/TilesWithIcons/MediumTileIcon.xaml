@@ -1,0 +1,116 @@
+﻿<UserControl x:Class="CustomLiveTiles.MediumTileIcon"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:local="using:CustomLiveTiles">
+
+    <UserControl.Resources>
+
+        <Storyboard x:Key="liveTileAnim1" x:Name="liveTileAnim1"
+                    Duration="0:0:4">
+            <DoubleAnimationUsingKeyFrames
+                BeginTime="00:00:01"
+                Storyboard.TargetName="panel1"
+                Storyboard.TargetProperty="Y">
+                <SplineDoubleKeyFrame KeyTime="00:00:00.100" Value="0" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.150" Value="-13" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.200" Value="-26" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.300" Value="-52" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.400" Value="-78" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.480" Value="-98" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.580" Value="-124" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.700" Value="-150" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:01"
+                                           Storyboard.TargetName="panel2"
+                                           Storyboard.TargetProperty="Y">
+                <SplineDoubleKeyFrame KeyTime="00:00:00.100" Value="0" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.150" Value="-13" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.200" Value="-26" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.300" Value="-52" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.400" Value="-78" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.480" Value="-98" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.580" Value="-124" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.700" Value="-150" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Key="liveTileAnim1_Inverse"
+                    x:Name="liveTileAnim1_Inverse" Duration="0:0:4">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:01"
+                                           Storyboard.TargetName="panel1"
+                                           Storyboard.TargetProperty="Y">
+                <SplineDoubleKeyFrame KeyTime="00:00:00.100" Value="-150" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.150" Value="-124" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.200" Value="-98" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.300" Value="-78" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.400" Value="-52" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.480" Value="-26" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.580" Value="-13" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.700" Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:01"
+                                           Storyboard.TargetName="panel2"
+                                           Storyboard.TargetProperty="Y">
+                <SplineDoubleKeyFrame KeyTime="00:00:00.100" Value="-150" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.150" Value="-124" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.200" Value="-98" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.300" Value="-78" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.400" Value="-52" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.480" Value="-26" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.580" Value="-13" />
+                <SplineDoubleKeyFrame KeyTime="00:00:00.700" Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+
+    <StackPanel Width="150" Height="150">
+        <Grid Name="gridFont"
+              Canvas.ZIndex="1"
+              Width="150" Height="150">
+            <Grid.RenderTransform>
+                <TranslateTransform x:Name="panel1" Y="0" />
+            </Grid.RenderTransform>
+            <Image
+                Name="imgBackground"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="0,0,0,12"
+                Width="110"
+                Height="110" />
+            <TextBlock
+                Name="txtTitle"
+                Margin="0, 0, 10, 5"
+                Width="94"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Right"
+                TextAlignment="Right"
+                FontFamily="Segoe UI" FontSize="18" />
+        </Grid>
+
+        <Grid Name="gridBack" Canvas.ZIndex="2"
+              Width="150" Height="150">
+            <Grid.RenderTransform>
+                <TranslateTransform x:Name="panel2" Y="0" />
+            </Grid.RenderTransform>
+            <TextBlock
+                Name="txtMessage"
+                Margin="10, 10, 10, 10"
+                TextWrapping="Wrap"
+                Width="130"
+                HorizontalAlignment="Left"
+                FontFamily="Segoe UI"
+                FontSize="12" />
+            <TextBlock
+                Name="txtBackTitle"
+                Margin="0, 0, 10, 5"
+                Width="94"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Right"
+                TextAlignment="Right"
+                FontFamily="Segoe UI" FontSize="18" />
+        </Grid>
+    </StackPanel>
+</UserControl>

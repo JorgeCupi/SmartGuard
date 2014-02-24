@@ -1,0 +1,43 @@
+﻿<views:MvxPhonePage
+    x:Class="SmartGuard.Phone.Views.AboutView"
+    xmlns:views="clr-namespace:Cirrious.MvvmCross.WindowsPhone.Views;assembly=Cirrious.MvvmCross.WindowsPhone"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="False">
+
+    <phone:Pivot DataContext="{StaticResource Global}"
+        Title="{Binding AppResources.AboutView_Title}">
+
+        <phone:PivotItem Header="{Binding AppResources.AboutView_Pivot_PrivacyPolicy}">
+            <ScrollViewer>
+                <TextBlock FontSize="23" TextWrapping="Wrap"
+                           Text="{Binding AppResources.AboutView_Txt_PrivacyPolicy}"/>
+            </ScrollViewer>
+        </phone:PivotItem>
+
+        
+        <phone:PivotItem Header="{Binding AppResources.AboutView_Pivot_Contact}">
+            <ScrollViewer>
+                <TextBlock FontSize="23" TextWrapping="Wrap"
+                           Text="{Binding AppResources.AboutView_Txt_Contact}"/>
+            </ScrollViewer>
+        </phone:PivotItem>
+
+        <phone:PivotItem Header="{Binding AppResources.AboutView_Pivot_ThanksTo}">
+            <ScrollViewer>
+                <TextBlock FontSize="23" TextWrapping="Wrap"
+                           Text="{Binding AppResources.AboutView_Txt_ThanksTo}"/>
+            </ScrollViewer>
+        </phone:PivotItem>
+        
+    </phone:Pivot>
+</views:MvxPhonePage>

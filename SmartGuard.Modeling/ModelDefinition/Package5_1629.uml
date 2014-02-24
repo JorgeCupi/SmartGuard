@@ -1,0 +1,1195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="19e1a7e0-6d7c-4932-8185-24e3996c122c"
+  name="Classes"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="20867f2d-5c86-441c-a675-fb3fb47bc9a8"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSmartGuard.Core.Facebook.Classes"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="865326bf-5255-42e5-a276-ecec9150c859"
+        name="FacebookUser"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="ee1b8b92-b8c7-412f-bd1d-37b598ef006c"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FD:%2FDotNet%2FVisual Studio 2012%2FProjects%2FSmartGuardMobile%2FSmartGuard.Core%2Fbin%2FDebug%2FSmartGuard.Core.dll&quot; Namespace%3DSmartGuard.Core.Facebook.Classes Type%3DFacebookUser"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="25d77124-e5b2-4642-b062-8b0f47f4a6e7"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4a6fbb9a-6732-46d8-ba31-f450ee72ebb6">
+                <propertyInstance
+                  Id="ad82d453-bd29-423f-b794-9e86ed52ae3c"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f6f8abd8-55c4-45d0-841f-3402a642e9dc">
+                <propertyInstance
+                  Id="f47f9339-0997-4f50-9d3a-84bcbf16606b"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="756fd0dc-d9c7-4698-9ae1-287746dd4a2a">
+                <propertyInstance
+                  Id="6a6d76db-cd48-424d-a8e0-af017e1ab056"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="097fb8e1-decd-4465-b58c-883460a1330b">
+                <propertyInstance
+                  Id="87980231-a839-4689-b6cb-50b5393d3959"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ddf7e6aa-55a8-4304-985d-8b84656c195e">
+                <propertyInstance
+                  Id="b4ab8c06-7a2c-49db-b13b-a8ba2858ecc0"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="775b4b56-e0ad-41d7-ab9a-3dab8581d98a"
+            isDerived="false"
+            sourceEndRoleName="FacebookUser"
+            targetEndRoleName="Gender"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="9d9c711b-2991-4cac-8f8e-a49a9b633b12"
+              LastKnownName="String"
+              LastKnownLocation="Package3_1629.uml" />
+            <description>Property Gender references type String.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b7805346-9d04-436e-a106-7c11c026f7a8"
+                  name="FacebookUser"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="35bb76f4-cb1c-4a9d-9762-023ddfcbcc38"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="0a09daa0-851c-4730-b358-072203587d1b"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="27ac2264-44c2-457e-aaab-bfb0901affbe"
+                  name="Gender"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="fcfad69a-8273-415b-8fff-394f12845799"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="77d9dc3b-4fc5-4da5-850e-1f6615188b0e"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d432721b-9b5d-4be5-a4fb-d6d599dad5d1"
+            isDerived="false"
+            sourceEndRoleName="FacebookUser"
+            targetEndRoleName="Id"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="9d9c711b-2991-4cac-8f8e-a49a9b633b12"
+              LastKnownName="String"
+              LastKnownLocation="Package3_1629.uml" />
+            <description>Property Id references type String.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8e32fe0f-d4fd-484a-8971-a4cb47da15a6"
+                  name="FacebookUser"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="3c9d0750-157a-4809-bd0b-84ba9c21087c"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="fda542bf-2b5a-4962-8f6c-4761aa330523"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="66705234-8b8d-434a-9008-f17a0c41c7b4"
+                  name="Id"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="579a03c4-80bb-4c2a-ad06-6b84e7ff74e1"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c65bef6d-5abc-4e9c-a426-f391a42e1c7d"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="dba1cf46-ac1b-4862-8245-3629e27c2a79"
+            isDerived="false"
+            sourceEndRoleName="FacebookUser"
+            targetEndRoleName="Name"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="9d9c711b-2991-4cac-8f8e-a49a9b633b12"
+              LastKnownName="String"
+              LastKnownLocation="Package3_1629.uml" />
+            <description>Property Name references type String.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2b3e14de-67f7-44ad-81b8-d8d567fc124a"
+                  name="FacebookUser"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="da977ce4-6334-49b2-8981-48ce0662c479"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="f4a8a1dd-ec74-4139-81ec-da1cf9c7e3fd"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="68a36595-15ed-4042-99df-41eded50b4d0"
+                  name="Name"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="8d82becb-0f2e-49fa-9b74-a18b86e4b41d"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="32c83c84-cd8b-4285-93e2-0a03a0909ac8"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="dac282b3-9b1d-41d6-954c-abfa97a2e9c9"
+            isDerived="false"
+            sourceEndRoleName="FacebookUser"
+            targetEndRoleName="Picture"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="284b926f-772d-447f-9a09-ba581e38446c"
+              LastKnownName="Picture"
+              LastKnownLocation="Package5_1629.uml" />
+            <description>Property Picture references type Picture.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5cc8235f-caef-49a1-89c9-092f965141b0"
+                  name="FacebookUser"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="2ea47511-81d1-4561-b08d-cc52babb4181"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="83dbe3db-7c1e-4a33-803e-54863b56fa40"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5a2aca57-ee68-41fa-9467-943b770b8f0f"
+                  name="Picture"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="fe913bd9-679d-498b-9331-23bbe6a37e5b"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="df124ce1-cad7-4161-b871-027234fb7413"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e50c1462-efdd-456d-abed-e13975b1518a"
+            isDerived="false"
+            sourceEndRoleName="FacebookUser"
+            targetEndRoleName="UsesApp"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="c7715a4c-1f66-4b8b-86b1-756d065f08c9"
+              LastKnownName="Boolean"
+              LastKnownLocation="Package3_1629.uml" />
+            <description>Property UsesApp references type Boolean.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0bb58291-0961-4844-8938-2ac6badae5a0"
+                  name="FacebookUser"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="7ba0c8e4-eaf5-4396-9d0b-4a97f9ab71a6"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="2d79810e-70f4-4294-9fc6-346fc72fc6d8"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="94b644b3-c76f-4fee-bae4-f47b313055f7"
+                  name="UsesApp"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="e067f031-f747-41ed-9750-cc1b72f86abd"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="338c3014-1577-4e1c-bdec-daa02e5b5bb7"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="43784b4f-9cdb-4db6-98f0-781d489c5001"
+            isDerived="false"
+            sourceEndRoleName="FacebookUser"
+            targetEndRoleName="fullDetail"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="9d9c711b-2991-4cac-8f8e-a49a9b633b12"
+              LastKnownName="String"
+              LastKnownLocation="Package3_1629.uml" />
+            <description>Property fullDetail references type String.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e9470cb8-8bfd-4e09-ae57-b1252a38df78"
+                  name="FacebookUser"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="3175fdc3-89e4-4452-bf7e-5c9f68fa8159"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="bd07d884-acb3-442e-89b1-614ff50c1688"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ff473d25-9091-41df-b9af-0854011fa451"
+                  name="fullDetail"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="2bc05e4e-666e-4e89-80b5-642a53a90b69"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="465ec6d7-31ea-442f-b259-c5a394147132"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="70c0cb91-71ae-45be-abf3-eef9d7427b1e"
+            isDerived="false"
+            sourceEndRoleName="FacebookUser"
+            targetEndRoleName="RedZone"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="b0479110-3774-4766-af2d-515751ff9453"
+              LastKnownName="RedZone"
+              LastKnownLocation="Package2_1629.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b31d914f-9132-4fdf-9dd0-5853fc68d1ac"
+                  name="FacebookUser"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="69e83df5-429a-4a6e-b124-66dd2c29e4fe"
+                  name="RedZone"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="89f312e5-deef-4ad2-b34f-226374367edc"
+            isDerived="false"
+            sourceEndRoleName="FacebookUser"
+            targetEndRoleName="Position"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e44dcbea-fc65-4d74-9c01-6ea83f057978"
+              LastKnownName="Position"
+              LastKnownLocation="Package2_1629.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="579525c0-2e8a-4ba3-b371-86d565daf446"
+                  name="FacebookUser"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="76de881e-7ce5-42ff-9c5c-c10a96f97541"
+                  name="Position"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="76c110f2-0cc3-4520-9648-34734dea9a9d"
+            isDerived="false"
+            sourceEndRoleName="FacebookUser"
+            targetEndRoleName="Permission"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e3bcf47b-4dc1-45a3-8f6a-1a41165b9b54"
+              LastKnownName="Permission"
+              LastKnownLocation="Package2_1629.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5853eed5-7082-4873-94aa-58f2c7cd5581"
+                  name="FacebookUser"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3401688b-2575-4a59-8328-853bd7cffcc8"
+                  name="Permission"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="b9204bc5-c896-4967-8a97-9f3962a0ca84"
+            name="Gender"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="4de16711-0aba-4e8e-9158-ac8794d2581f"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FDotNet%2FVisual Studio 2012%2FProjects%2FSmartGuardMobile%2FSmartGuard.Core%2Fbin%2FDebug%2FSmartGuard.Core.dll&quot; Namespace%3DSmartGuard.Core.Facebook.Classes Type%3DFacebookUser Member%3DGender"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9d4a2bad-00cc-4bf8-ad16-67a38ab012d9"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7d2f0253-26fe-491f-bac1-521b8db1aa32">
+                    <propertyInstance
+                      Id="c6cd9bb2-46a7-41d1-b56f-3f498de7b0b3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="30e774bc-ea49-467e-9e7b-775455cd9eb3">
+                    <propertyInstance
+                      Id="6e89d760-4a0f-4746-9adc-766fa9774a21"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a7209d1a-d16a-4479-ba08-5e2f77fc174d">
+                    <propertyInstance
+                      Id="037d8837-5394-439f-8998-6092c224b87f"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3c21fa14-4710-4335-95c5-b0c1cf022cb4">
+                    <propertyInstance
+                      Id="b4d046a3-99cc-4e99-954c-0992c652265e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="90369bba-eb17-4b64-84bc-942766ff17d4">
+                    <propertyInstance
+                      Id="ec55ee13-bd00-4ebe-a34f-b113c4ef3cbd"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3f08149f-087a-4914-ab75-4b9d21ead186">
+                    <propertyInstance
+                      Id="15603a43-ac05-46f8-b64f-c4e2e3fd69b6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="52b6ec17-b1c8-401f-bcc2-6e109550f2c7">
+                    <propertyInstance
+                      Id="903aae6a-a1dc-4060-bc4c-f5d58f261089"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="9d9c711b-2991-4cac-8f8e-a49a9b633b12"
+                LastKnownName="String"
+                LastKnownLocation="Package3_1629.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e399bd06-b173-4b72-ba6d-bd0801db5d5c"
+            name="Id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="19f0cfed-2697-442e-a15b-f85fbe0a9e54"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FDotNet%2FVisual Studio 2012%2FProjects%2FSmartGuardMobile%2FSmartGuard.Core%2Fbin%2FDebug%2FSmartGuard.Core.dll&quot; Namespace%3DSmartGuard.Core.Facebook.Classes Type%3DFacebookUser Member%3DId"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ea040a23-bf33-430c-b04b-1aa70de32999"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9a816f34-b7c1-4dbf-81b1-1a38614b9a45">
+                    <propertyInstance
+                      Id="b6305803-a810-4b2e-a932-5521496f00db"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fa0fd739-b45d-4275-a4ef-1e165b18d008">
+                    <propertyInstance
+                      Id="ecfe8b80-0624-4f82-8da0-ba6bcefcae67"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c4ca1a4e-1c2b-43fa-8ef2-351bfcc778fc">
+                    <propertyInstance
+                      Id="71923cff-62ea-4c25-9450-d023949f19f2"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2d394de6-3445-4c15-bf45-8c117993d879">
+                    <propertyInstance
+                      Id="7163f02d-dcd1-47a0-b0a5-e28b72d07f67"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7ee0b86c-385f-4d33-8cd0-868810f2c4ce">
+                    <propertyInstance
+                      Id="ad942ea5-bc60-497e-b1a5-2ca3529c8951"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c0d7041a-625a-4ccc-8e40-3ced4de09990">
+                    <propertyInstance
+                      Id="3c866d43-ea2e-4a85-a6b7-341c17de3d1d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a4690628-8342-4350-ac48-016a79e1edc2">
+                    <propertyInstance
+                      Id="6dbf2142-fb71-4442-9068-f91ff97eb699"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="9d9c711b-2991-4cac-8f8e-a49a9b633b12"
+                LastKnownName="String"
+                LastKnownLocation="Package3_1629.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f805d5b0-f1c2-4a66-8918-f9ebb6ac17fd"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="89c750ce-52dc-4012-9078-b0c51154a9fb"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FDotNet%2FVisual Studio 2012%2FProjects%2FSmartGuardMobile%2FSmartGuard.Core%2Fbin%2FDebug%2FSmartGuard.Core.dll&quot; Namespace%3DSmartGuard.Core.Facebook.Classes Type%3DFacebookUser Member%3DName"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2bf84ad8-c6de-4ee0-b087-780e6edbb0ab"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f376f716-b046-4e88-919b-b2051e3d73cc">
+                    <propertyInstance
+                      Id="ad6b6aed-d71a-4dbe-9835-7dc639c97dd9"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="128a7520-d315-4b7f-931b-43fa8f27ff85">
+                    <propertyInstance
+                      Id="ca2184ec-9f01-4bf9-ba1e-b6c9b0dff6ee"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1eea8875-569b-44e9-bc0e-9295197e201d">
+                    <propertyInstance
+                      Id="82524afc-16da-4fe5-9141-1c0ead44fdbe"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1a2e597a-b0a3-4559-b090-881d43a95fb5">
+                    <propertyInstance
+                      Id="02d2c30c-dad2-45d3-a2ec-288179830f17"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="30921daa-662d-49ac-b41c-923cdbcdafeb">
+                    <propertyInstance
+                      Id="7e458aad-1d0f-4061-a106-de4da8a0c76e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bdb6ee2e-0237-4ec9-9075-c454a3d88bba">
+                    <propertyInstance
+                      Id="1217b302-95a9-44cd-90c5-5db82fecf521"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6b168139-c0f2-436f-bbf3-dfd7ce8f2f2f">
+                    <propertyInstance
+                      Id="7e905888-c48b-42ce-95b2-aa2a7db83891"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="9d9c711b-2991-4cac-8f8e-a49a9b633b12"
+                LastKnownName="String"
+                LastKnownLocation="Package3_1629.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ac9133dc-2533-4de9-9e61-2b5ea508ac8a"
+            name="Picture"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="3f4fdf6e-2cfb-4eac-9aff-c7193c86c489"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FDotNet%2FVisual Studio 2012%2FProjects%2FSmartGuardMobile%2FSmartGuard.Core%2Fbin%2FDebug%2FSmartGuard.Core.dll&quot; Namespace%3DSmartGuard.Core.Facebook.Classes Type%3DFacebookUser Member%3DPicture"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7efdfc9f-fc8a-4eb0-9777-57fd99127a02"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="07f4265d-273d-4d4a-8cfb-09f5c984b745">
+                    <propertyInstance
+                      Id="febaded1-e24d-4413-855b-da2f0121bb49"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6aa9d9c3-be6d-4a7f-aeec-1ea6f99780fe">
+                    <propertyInstance
+                      Id="3cce9f22-c57d-483e-8780-375567b52ee5"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3a8b6436-66df-440a-ab4b-b7b899f1bf99">
+                    <propertyInstance
+                      Id="6413b8a5-1793-4d1f-931c-1bb6ce363b43"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="27adb130-070e-4a18-876d-57f7fa163d57">
+                    <propertyInstance
+                      Id="2b7a59eb-938a-4d4d-bd00-0cf8cb17bec6"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3669e516-0714-48dc-aa76-b5e36d7ba43a">
+                    <propertyInstance
+                      Id="9ebc5f29-65ac-43a2-ad8e-4d1cccadb180"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="62086246-b42d-4eda-b253-6b92b2f3fc75">
+                    <propertyInstance
+                      Id="a1704dd8-6142-48ec-b159-4676d3278643"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ac50fc45-e75e-4cfb-915a-bfa3507ed271">
+                    <propertyInstance
+                      Id="901bd82b-1638-4b80-86d6-44e2b184b753"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="284b926f-772d-447f-9a09-ba581e38446c"
+                LastKnownName="Picture"
+                LastKnownLocation="Package5_1629.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="92939ce1-21da-4fca-b3e7-63e84e90cb6b"
+            name="UsesApp"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="0ce7e464-1bc8-43b6-9aec-39c5a4e3e891"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FDotNet%2FVisual Studio 2012%2FProjects%2FSmartGuardMobile%2FSmartGuard.Core%2Fbin%2FDebug%2FSmartGuard.Core.dll&quot; Namespace%3DSmartGuard.Core.Facebook.Classes Type%3DFacebookUser Member%3DUsesApp"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4fcfac81-d41e-44dc-9636-3838dd3a1f09"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c25f7ca2-0f27-4ea6-907b-38c6f4a46fa7">
+                    <propertyInstance
+                      Id="c18eed0d-3ac3-4d39-8b0c-e309bc62b3f0"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fc5466f4-0fb5-4b63-b3ba-8bd293936324">
+                    <propertyInstance
+                      Id="cd2bc51e-c466-49ce-a6c9-fad386c9c370"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0533a27e-5ce2-490a-95cc-68162acb04df">
+                    <propertyInstance
+                      Id="c93864a5-4f70-458b-9ff2-1c1a17047766"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b50eda2a-48ba-4baa-b09d-b7900613df4a">
+                    <propertyInstance
+                      Id="45b18011-50ff-4720-b37d-1708fe189eb3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1563a67c-3b54-4b64-840e-3bfefd34be91">
+                    <propertyInstance
+                      Id="5d113e2c-20cf-4134-a901-a40d1f985fd1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="da1165d2-477a-443a-af4d-e76a1e943f9a">
+                    <propertyInstance
+                      Id="42de5a21-c151-4848-8376-ea3dec72aa1c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="01cf0f55-6f71-493c-b18f-538fd2c6acae">
+                    <propertyInstance
+                      Id="27213fd3-4c04-4776-a9aa-05228d3ab58d"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="c7715a4c-1f66-4b8b-86b1-756d065f08c9"
+                LastKnownName="Boolean"
+                LastKnownLocation="Package3_1629.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="247280c4-3b89-41ac-af72-41d686391b19"
+            name="fullDetail"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="9b51940b-59cf-476b-b8d4-1b2ce72e3016"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FD:%2FDotNet%2FVisual Studio 2012%2FProjects%2FSmartGuardMobile%2FSmartGuard.Core%2Fbin%2FDebug%2FSmartGuard.Core.dll&quot; Namespace%3DSmartGuard.Core.Facebook.Classes Type%3DFacebookUser Member%3DfullDetail"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6dab6ebb-bca4-4507-805c-a4b21271e986"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="97ded7ff-4081-4536-b613-70bee97479ad">
+                    <propertyInstance
+                      Id="da551286-7dda-4788-ae31-bc7a33d670fd"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6f6369cf-ee15-42b0-8b46-fbba376efe10">
+                    <propertyInstance
+                      Id="70c29726-aff9-4ff9-b19e-aa9c8cc314a9"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d95bb68d-250a-4842-a076-0fd64ee902a2">
+                    <propertyInstance
+                      Id="2227e625-61b5-4ffe-a069-cf5538396a03"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cad9284a-bd97-4d83-bbcc-1aa5b365a5bb">
+                    <propertyInstance
+                      Id="fd00e0e0-ac2a-4a7e-96df-968c764e6131"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d02703fa-5635-44ad-83d9-3b3f9a8dbcbe">
+                    <propertyInstance
+                      Id="7e596508-f2b2-4d34-973b-17c7de5a5c44"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d73c3310-02f1-4993-ae18-e4a66e0091ce">
+                    <propertyInstance
+                      Id="7caf48b6-b8b8-4a5a-8373-bf357af5f51a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="14292d14-f69e-48f7-bca3-fc3080869726">
+                    <propertyInstance
+                      Id="aed55f32-7a10-4bac-ad4a-5988606f3812"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="9d9c711b-2991-4cac-8f8e-a49a9b633b12"
+                LastKnownName="String"
+                LastKnownLocation="Package3_1629.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="a3b8894b-be6a-4223-9f71-0375761c7ebe"
+            name="FacebookUser"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="473715a2-09e7-4389-ba28-6ac8e2c900ce"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FD:%2FDotNet%2FVisual Studio 2012%2FProjects%2FSmartGuardMobile%2FSmartGuard.Core%2Fbin%2FDebug%2FSmartGuard.Core.dll&quot; Namespace%3DSmartGuard.Core.Facebook.Classes Type%3DFacebookUser Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2078b5f1-0a6d-4443-b2dc-780824e479b4"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4d1f9253-cbe2-40eb-9ba6-52d7a88b9229">
+                    <propertyInstance
+                      Id="ac1ee21f-0849-422a-ba09-8eea3183efdd"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="45cfbdc3-5889-46a7-89ae-1c53c3ed8029">
+                    <propertyInstance
+                      Id="bf3a7171-1467-4968-bc75-ef1ad7197348"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7445081d-0142-44e8-9ad1-8b5831200fcc">
+                    <propertyInstance
+                      Id="8084144a-5bcd-4a0d-8af3-705c282474c8"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4597d12d-5ee2-4093-b541-eb647e2f440a">
+                    <propertyInstance
+                      Id="754a6556-2f0e-4bd1-881b-2b0c58ce05c3"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bef896f9-55d8-461e-a219-de34719735ca">
+                    <propertyInstance
+                      Id="79286e34-2b76-4611-b8dc-9d9c915781d8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="042877fa-90c2-4a73-941f-fdd905275ba1">
+                    <propertyInstance
+                      Id="90ce0004-71d0-4516-b331-f55a11345c80"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="284b926f-772d-447f-9a09-ba581e38446c"
+        name="Picture"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="612294e6-f4c8-4e4a-adce-4e3b83de4231"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FD:%2FDotNet%2FVisual Studio 2012%2FProjects%2FSmartGuardMobile%2FSmartGuard.Core%2Fbin%2FDebug%2FSmartGuard.Core.dll&quot; Namespace%3DSmartGuard.Core.Facebook.Classes Type%3DPicture"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="8ae4a08c-8f69-4aca-9af2-2af692b7ec59"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5ee92d7a-b65c-4693-b63e-77159f7bde4c">
+                <propertyInstance
+                  Id="7e617903-aa0a-4dad-bbda-5dbd5c425e90"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e433efc3-ba61-4617-a286-4fbb2907b015">
+                <propertyInstance
+                  Id="c0cffb49-c6e3-4837-8592-978d397f70e3"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="af22fd57-59f3-4d08-b7fe-d0e44a4e08c7">
+                <propertyInstance
+                  Id="5f2be0b5-723e-4e00-8f64-b1a80aae099a"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="740b2e69-1f49-48fc-9310-8c1c1ae31a0b">
+                <propertyInstance
+                  Id="febcbcab-cf63-47d4-9b65-b95ff51c3d9d"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="220ae1ca-670b-4362-8b65-e3e2bb441da6">
+                <propertyInstance
+                  Id="74a51660-1812-4cbb-acbc-d39d37fc8ff9"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

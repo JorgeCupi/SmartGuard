@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ResourceFlowDirection" xml:space="preserve">
+    <value>LeftToRight</value>
+    <comment>Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</comment>
+  </data>
+  <data name="ResourceLanguage" xml:space="preserve">
+    <value>en</value>
+    <comment>Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</comment>
+  </data>
+  <data name="ApplicationTitle" xml:space="preserve">
+    <value>SmartGuard</value>
+  </data>
+  <data name="MainView_Tile_Notifications" xml:space="preserve">
+    <value>Requests</value>
+  </data>
+  <data name="MainView_Tile_Broadcast" xml:space="preserve">
+    <value>Broadcast</value>
+  </data>
+  <data name="MainView_Tile_RedZones" xml:space="preserve">
+    <value>Red Zones</value>
+  </data>
+  <data name="Views_List" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="FriendInfoView_Title" xml:space="preserve">
+    <value>Last positions</value>
+  </data>
+  <data name="RequestsView_Title" xml:space="preserve">
+    <value>Requests</value>
+  </data>
+  <data name="Views_Friends" xml:space="preserve">
+    <value>Friends</value>
+  </data>
+  <data name="RequestsView_PivotIncoming_Title" xml:space="preserve">
+    <value>Incoming</value>
+  </data>
+  <data name="RedZonesView_Title" xml:space="preserve">
+    <value>Red Zones</value>
+  </data>
+  <data name="Views_Map" xml:space="preserve">
+    <value>Map</value>
+  </data>
+  <data name="AppBar_Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="RegisteredAt" xml:space="preserve">
+    <value>Registered </value>
+  </data>
+  <data name="Says" xml:space="preserve">
+    <value> says:</value>
+  </data>
+  <data name="RedZonesView_UpdateDescription" xml:space="preserve">
+    <value>Description about the zone:</value>
+  </data>
+  <data name="RedZonesView_UpdateRadius" xml:space="preserve">
+    <value>Estimated zone radio (in meters):</value>
+  </data>
+  <data name="Facebook_LogIn_Error" xml:space="preserve">
+    <value>Something horrible, horrible happened and we don't know why. Please try again later.</value>
+  </data>
+  <data name="Facebook_LogIn_Success" xml:space="preserve">
+    <value>You have succesfully log in to Facebook, now can start using Smartguard.</value>
+  </data>
+  <data name="Facebook_LogOut_Question" xml:space="preserve">
+    <value>You're already logged in to your account. If you press OK you'll be logged out. Are you sure you want to do this?</value>
+  </data>
+  <data name="RateView_Btn_RateMe" xml:space="preserve">
+    <value>Rate the app</value>
+  </data>
+  <data name="RateView_Btn_Survey" xml:space="preserve">
+    <value>Take the online survey</value>
+  </data>
+  <data name="RateView_Pivot_Title" xml:space="preserve">
+    <value>Have your say</value>
+  </data>
+  <data name="RateView_Txt_Explanation" xml:space="preserve">
+    <value>Because your opinion really matters, the SmartGuard team takes serious attention to all possible feedback you give us, that's why we always read your comments on the reviews. You are helping us make SmartGuard a better app for everyone.
+And in that spirit we would really appreciate it if we can steal a minute of your time to fill an online survey that will help us to know what you may want or need in the next app update.
+Thank you for using SmartGuard! We care as much as you when beloved ones are involved.</value>
+  </data>
+  <data name="AboutView_Pivot_Contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="AboutView_Pivot_PrivacyPolicy" xml:space="preserve">
+    <value>Privacy Policy</value>
+  </data>
+  <data name="AboutView_Pivot_ThanksTo" xml:space="preserve">
+    <value>Thanks To</value>
+  </data>
+  <data name="AboutView_Title" xml:space="preserve">
+    <value>About SmartGuard</value>
+  </data>
+  <data name="AboutView_Txt_Contact" xml:space="preserve">
+    <value>Got any questions?
+You can write us at info@smartguard.com to ask anything you want about this application.</value>
+  </data>
+  <data name="AboutView_Txt_PrivacyPolicy" xml:space="preserve">
+    <value>About your location</value>
+  </data>
+  <data name="AboutView_Txt_ThanksTo" xml:space="preserve">
+    <value>First, I want to thank my college professors: Rosa Flores and Brigida Carvajal who helped me with as consultants during the whole process.</value>
+  </data>
+  <data name="FriendAddView_Pivot_AddTitle" xml:space="preserve">
+    <value>Invite a friend</value>
+  </data>
+  <data name="FriendAddView_Txt_FriendAddError" xml:space="preserve">
+    <value>Something happened when you tried to send the request. Check your internet connection and try again later.</value>
+  </data>
+  <data name="FriendAddView_Txt_FriendAddQuestion" xml:space="preserve">
+    <value>You are about to send an invitation to {0}. Press OK to continue or Cancel to abort the request.</value>
+  </data>
+  <data name="FriendAddView_Txt_FriendAddSuccess" xml:space="preserve">
+    <value>Friend request sent succesfully!</value>
+  </data>
+  <data name="FriendAddView_Txt_FriendAddTitle" xml:space="preserve">
+    <value>Send request</value>
+  </data>
+  <data name="FriendAddView_Txt_FriendDownloadError" xml:space="preserve">
+    <value>Something happened when we tried to  get your facebook friends list. Check your internet connection and try again later.</value>
+  </data>
+  <data name="FriendsView_Txt_DownloadFriendsError" xml:space="preserve">
+    <value>Something happened when we tried to get the positions from your friends. Check your internet connection and try again later.</value>
+  </data>
+  <data name="Txt_Near" xml:space="preserve">
+    <value>Near </value>
+  </data>
+  <data name="General_Txt_Concede" xml:space="preserve">
+    <value>concede</value>
+  </data>
+  <data name="General_Txt_Revoke" xml:space="preserve">
+    <value>revoke</value>
+  </data>
+  <data name="RequestsView_PivotOutgoing_Title" xml:space="preserve">
+    <value>Outgoing</value>
+  </data>
+  <data name="RequestsView_Txt_UpdatePermission" xml:space="preserve">
+    <value>You're about to {0} permissions for {1}. Are you sure? If so, press OK to confirm or Cancel to abort the update.</value>
+  </data>
+  <data name="RequestView_Txt_UpdatePermissionError" xml:space="preserve">
+    <value>Something happened when we tried to update this friend's permission. Please check your internet connection and try again later.</value>
+  </data>
+  <data name="RequestView_Txt_UpdatePermissionSuccess" xml:space="preserve">
+    <value>Permission updated succesfully!</value>
+  </data>
+  <data name="General_Txt_Follow" xml:space="preserve">
+    <value>follow</value>
+  </data>
+  <data name="General_Txt_Unfollow" xml:space="preserve">
+    <value>unfollow</value>
+  </data>
+  <data name="RequestsView_Txt_UpdateFollowingStatus" xml:space="preserve">
+    <value>You're about to {0}  {1}'s positions. Are you sure? If so, press OK to confirm or Cancel to abort the update.</value>
+  </data>
+  <data name="General_Disabled" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="General_Enabled" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="General_Kilometers" xml:space="preserve">
+    <value>Kilometers</value>
+  </data>
+  <data name="General_Miles" xml:space="preserve">
+    <value>Miles</value>
+  </data>
+  <data name="General_Off" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="General_On" xml:space="preserve">
+    <value>On</value>
+  </data>
+  <data name="SettingsView_DistanceMeasure" xml:space="preserve">
+    <value>Preferred distance measure:</value>
+  </data>
+  <data name="SettingsView_IntenseMode" xml:space="preserve">
+    <value>Intense mode</value>
+  </data>
+  <data name="SettingsView_IntenseMode_Message" xml:space="preserve">
+    <value>When started, your position is updated almost every 10 minutes when you're outside SmartGuard if you are connected to the internet and your GPS is receiving data.</value>
+  </data>
+  <data name="SettingsView_LockScreen" xml:space="preserve">
+    <value>Lockscreen capability:</value>
+  </data>
+  <data name="SettingsView_MaxPositions" xml:space="preserve">
+    <value>Maximum positions to download from each friend</value>
+  </data>
+  <data name="SettingsView_OfflineDB" xml:space="preserve">
+    <value>Offline database</value>
+  </data>
+  <data name="SettingsView_OfflineDB_Message" xml:space="preserve">
+    <value>When enabled, everytime you receive new information, it's stored as a backup in an offline database so you can check on it when you're not near a WiFi hotspot or out of your data plan limit.</value>
+  </data>
+  <data name="SettingsView_QuickIntenseMode" xml:space="preserve">
+    <value>Quick intense mode </value>
+  </data>
+  <data name="SettingsView_QuickIntenseMode_Message" xml:space="preserve">
+    <value>Hold the Broacast tile to start Intense mode from the main menu</value>
+  </data>
+  <data name="SettingsView_Title" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="SettingsView_Txt_Friends" xml:space="preserve">
+    <value>Friends</value>
+  </data>
+  <data name="SettingsView_Txt_General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="SettingsView_Txt_MyPosition" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="SettingsView_QuickBroadcast" xml:space="preserve">
+    <value>Quick broadcast</value>
+  </data>
+  <data name="SettingsView_QuickBroadcast_Message" xml:space="preserve">
+    <value>Hold tap the Broadcast tile to quickly upload your position.</value>
+  </data>
+  <data name="MainView_Tile_Friends" xml:space="preserve">
+    <value>Friend's positions</value>
+  </data>
+  <data name="BroadcastView_Title" xml:space="preserve">
+    <value>Broadcast</value>
+  </data>
+  <data name="LocationService_NoData" xml:space="preserve">
+    <value>This is embarassing, we couldn't get your position right now, we blame it on the satellites. Please try again later.</value>
+  </data>
+  <data name="LocationService_NoService" xml:space="preserve">
+    <value>Your location services are disabled. Please go to your smartphone's settings and enabled them again.</value>
+  </data>
+  <data name="LocationService_Title" xml:space="preserve">
+    <value>Location services</value>
+  </data>
+  <data name="AppBar_Intense" xml:space="preserve">
+    <value>Start intense mode</value>
+  </data>
+  <data name="AppBar_Share" xml:space="preserve">
+    <value>Share</value>
+  </data>
+  <data name="BroadcastView_BroadcastError" xml:space="preserve">
+    <value>Something went horribly, horribly wrong! And we couldn't upload your position. We recommend you check your internet connnection, you know, just in case and try again later.</value>
+  </data>
+  <data name="BroadcastView_BroadcastSucceeded" xml:space="preserve">
+    <value>Position updated succesfully!</value>
+  </data>
+  <data name="BroadcastView_CurrentPosition" xml:space="preserve">
+    <value>Current position</value>
+  </data>
+  <data name="MainView_Tile_BroadcastMessage_BroadcastEnabled" xml:space="preserve">
+    <value>Hold this tile to quickly upload your position.</value>
+  </data>
+  <data name="MainView_Tile_BroadcastMessage_IntenseEnabled" xml:space="preserve">
+    <value>Hold this tile to quickly start Intense Mode.</value>
+  </data>
+  <data name="General_LastPositionMessage" xml:space="preserve">
+    <value>I was here on {0} at {1}</value>
+  </data>
+  <data name="General_LastPositionTitle" xml:space="preserve">
+    <value>This was my last position.</value>
+  </data>
+  <data name="General_RedZoneWarning" xml:space="preserve">
+    <value>Be cautious when walking near this zone:</value>
+  </data>
+  <data name="General_RedZoneWarning_Message" xml:space="preserve">
+    <value>{0}{1}
+{2}</value>
+  </data>
+  <data name="IntenseModeOFF" xml:space="preserve">
+    <value>Intense Mode has stopped.</value>
+  </data>
+  <data name="IntenseModeON" xml:space="preserve">
+    <value>Intense Mode has started.</value>
+  </data>
+  <data name="ShareView_Email" xml:space="preserve">
+    <value>Send an Email</value>
+  </data>
+  <data name="ShareView_SMS" xml:space="preserve">
+    <value>Send an SMS</value>
+  </data>
+  <data name="ShareView_SocialNetworks" xml:space="preserve">
+    <value>On social networks</value>
+  </data>
+  <data name="ShareView_Title" xml:space="preserve">
+    <value>Share it</value>
+  </data>
+  <data name="SmartGuardBackgroundAgent" xml:space="preserve">
+    <value>SmartGuard's Background Agent let's you do a couple of things such as:
+- Check your friend's last activity
+- Upload your position even when you're outside SmartGuard
+- Check news about new red zones around you.</value>
+  </data>
+  <data name="General_NearYou" xml:space="preserve">
+    <value> near you</value>
+  </data>
+  <data name="General_Started" xml:space="preserve">
+    <value>Started</value>
+  </data>
+  <data name="General_Stopped" xml:space="preserve">
+    <value>Stopped</value>
+  </data>
+  <data name="GoToLockScreen" xml:space="preserve">
+    <value>Go to LockScreen settings</value>
+  </data>
+  <data name="RedZone_SelectedItemError" xml:space="preserve">
+    <value>Please select a Red Zone from the list first.</value>
+  </data>
+  <data name="IntenseModeCantStart" xml:space="preserve">
+    <value>We can't start Intense Mode if location services are turned off. Please turn them on and try again.</value>
+  </data>
+  <data name="AppBar_Directions" xml:space="preserve">
+    <value>directions</value>
+  </data>
+  <data name="AppBar_SeeMore" xml:space="preserve">
+    <value>see more</value>
+  </data>
+  <data name="FriendsView_SeeMore" xml:space="preserve">
+    <value>See more</value>
+  </data>
+  <data name="FriendsView_SelectedItemError" xml:space="preserve">
+    <value>Please select a friend from the list first.</value>
+  </data>
+  <data name="GPS_CurrentPosition" xml:space="preserve">
+    <value>You're here</value>
+  </data>
+  <data name="GPS_EndPosition" xml:space="preserve">
+    <value>Your goal</value>
+  </data>
+  <data name="GPS_GetDirections" xml:space="preserve">
+    <value>Get directions</value>
+  </data>
+  <data name="MainView_Tile_Notifications_Message" xml:space="preserve">
+    <value>The place to revoke and concede permissions.</value>
+  </data>
+  <data name="MainView_Tile_RedZones_Message" xml:space="preserve">
+    <value>Want to know if that place you want to go is safe?.</value>
+  </data>
+  <data name="BroadcastView_MyPositions" xml:space="preserve">
+    <value>My positions</value>
+  </data>
+  <data name="AppBar_LastMonth" xml:space="preserve">
+    <value>Positions from last thirty days</value>
+  </data>
+  <data name="AppBar_LastWeek" xml:space="preserve">
+    <value>Positions from last seven days</value>
+  </data>
+  <data name="AppBar_Today" xml:space="preserve">
+    <value>Positions from today</value>
+  </data>
+  <data name="Positions_NoPositionsLastMonth" xml:space="preserve">
+    <value>No positions registered from the last thirty days.</value>
+  </data>
+  <data name="Positions_NoPositionsLastSevenDays" xml:space="preserve">
+    <value>No positions registered from the last seven days.</value>
+  </data>
+  <data name="Positions_NoPositionsToday" xml:space="preserve">
+    <value>No positions registered today.</value>
+  </data>
+  <data name="Share_ShareFriendPosition" xml:space="preserve">
+    <value>{0} was seen near {1} on {2} at {3}</value>
+  </data>
+  <data name="PositionSelectedError" xml:space="preserve">
+    <value>Please, select on of the positions from the list.</value>
+  </data>
+</root>
