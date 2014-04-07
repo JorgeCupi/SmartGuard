@@ -12,6 +12,7 @@ namespace SmartGuard.Core.ViewModels
     public partial class FriendInfoViewModel : MvxViewModel
     {
         private Friend selectedFriend;
+
         public Friend SelectedFriend
         {
             get { return selectedFriend; }
@@ -24,6 +25,7 @@ namespace SmartGuard.Core.ViewModels
         }
 
         private int positionsToBeDownloaded;
+
         public int PositionsToBeDownloaded
         {
             get { return positionsToBeDownloaded; }
@@ -31,6 +33,7 @@ namespace SmartGuard.Core.ViewModels
         }
 
         private Position selectedPosition;
+
         public Position SelectedPosition
         {
             get { return selectedPosition; }
@@ -43,6 +46,7 @@ namespace SmartGuard.Core.ViewModels
         }
 
         private bool downloadedError;
+
         public bool DownloadedError
         {
             get { return downloadedError; }
@@ -50,15 +54,17 @@ namespace SmartGuard.Core.ViewModels
         }
 
         private bool haventDownloaded;
+
         public bool HaventDownloaded
         {
             get { return haventDownloaded; }
             set { haventDownloaded = value; RaisePropertyChanged(() => HaventDownloaded); }
         }
 
-
         public ObservableCollection<Position> Positions { get; set; }
+
         private Friend friend;
+
         public Friend Friend
         {
             get { return friend; }
@@ -75,9 +81,9 @@ namespace SmartGuard.Core.ViewModels
             PositionsToBeDownloaded = 35;
         }
 
-        void Positions_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        private void Positions_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
-            RaisePropertyChanged(() => Positions); 
+            RaisePropertyChanged(() => Positions);
         }
 
         public async void DownloadLastPositions(int max)
@@ -94,7 +100,7 @@ namespace SmartGuard.Core.ViewModels
             HaventDownloaded = true;
             try
             {
-                List<Position> temp = await Queries.GetPositionsForThisCode(Friend.FacebookID,max);
+                List<Position> temp = await Queries.GetPositionsForThisCode(Friend.FacebookID, max);
                 IEnumerable<Position> datedPositions = from P in temp
                                                        where P.RegisteredAt.Date >= TimeDifference.Date
                                                        select P;
@@ -114,8 +120,8 @@ namespace SmartGuard.Core.ViewModels
             }
 
             HaventDownloaded = false;
-            if(Positions.Count>0)
-                DownloadedError= false;
+            if (Positions.Count > 0)
+                DownloadedError = false;
             else DownloadedError = true;
         }
 
@@ -123,6 +129,5 @@ namespace SmartGuard.Core.ViewModels
         {
             get { return new MvxCommand(() => ShowViewModel<GetDirectionsViewModel>()); }
         }
-
     }
 }

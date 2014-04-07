@@ -1,30 +1,34 @@
 ﻿using Cirrious.MvvmCross.ViewModels;
 using SmartGuard.Core.Azure.Tables;
+using SmartGuard.Core.Facebook.Authenticate;
+using SmartGuard.Core.Facebook.Classes;
+using SmartGuard.Core.Facebook.Queries;
 using SmartGuard.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
-using System.Linq;
-using System.Text;
-using SmartGuard.Core.Facebook.Classes;
-using SmartGuard.Core.Facebook.Queries;
-using System.Windows.Input;
-using SmartGuard.Core.Facebook.Authenticate;
 using System.Threading.Tasks;
+using System.Windows.Input;
+
 namespace SmartGuard.Core.ViewModels
 {
-    public class RequestsViewModel:MvxViewModel
+    public class RequestsViewModel : MvxViewModel
     {
         private bool haventUploaded;
+
         public bool HaventUploaded
         {
             get { return haventUploaded; }
             set { haventUploaded = value; RaisePropertyChanged(() => HaventUploaded); }
         }
-        public ObservableCollection<Friend> FriendsRequests{ get; set; }
+
+        public ObservableCollection<Friend> FriendsRequests { get; set; }
+
         public ObservableCollection<Friend> MyRequests { get; set; }
+
         private Friend selectedFriend;
+
         public Friend SelectedFriend
         {
             get { return selectedFriend; }
@@ -34,6 +38,7 @@ namespace SmartGuard.Core.ViewModels
                 RaisePropertyChanged(() => SelectedFriend);
             }
         }
+
         public RequestsViewModel()
         {
             FriendsRequests = new ObservableCollection<Friend>();
@@ -42,9 +47,8 @@ namespace SmartGuard.Core.ViewModels
             MyRequests.CollectionChanged += MyRequests_CollectionChanged;
             DownloadMyPermissionsRequests();
             DownloadPermissionsRequests();
-            
         }
-        
+
         public async void DownloadMyPermissionsRequests()
         {
             HaventUploaded = true;
@@ -59,33 +63,41 @@ namespace SmartGuard.Core.ViewModels
             HaventUploaded = false;
         }
 
-        private async Task AddPermissionsToThisList(string keyName,ObservableCollection<Friend> collection)
+        private async Task  AddPermissionsToThisList(string keyName, ObservableCollection<Friend> collection)
         {
-            List<Permission> permissions = await Queries.GetPermissionsForThisCode(keyName,Utilities.fbUserID);
+            List<Permission> permissions = await Queries.GetPermissionsForThisCode(keyName, Utilities.fbUserID);
             foreach (Permission Allowed in permissions)
             {
-                FacebookUser fbUser;
-                if(keyName == "RowKey")
-                    fbUser = await Users.DownloadUserInfo(Allowed.FBIDFromViewer);
-                else fbUser = await Users.DownloadUserInfo(Allowed.FBIDFromViewed);
-                collection.Add(new Friend
+                try
                 {
-                    FacebookID = fbUser.Id,
-                    Name = fbUser.Name,
-                    Picture = fbUser.Picture.data.url,
-                    IsAllowed = Allowed.IsAllowed,
-                    FBIDFromViewer = Allowed.FBIDFromViewer,
-                    FBIDFromViewed = Allowed.FBIDFromViewed
-                });
+                    FacebookUser fbUser;
+                    if (keyName == "RowKey")
+                        fbUser = await Users.DownloadUserInfo(Allowed.FBIDFromViewer);
+                    else fbUser = await Users.DownloadUserInfo(Allowed.FBIDFromViewed);
+                    collection.Add(new Friend
+                    {
+                        FacebookID = fbUser.Id,
+                        Name = fbUser.Name,
+                        Picture = fbUser.Picture.data.url,
+                        IsAllowed = Allowed.IsAllowed,
+                        FBIDFromViewer = Allowed.FBIDFromViewer,
+                        FBIDFromViewed = Allowed.FBIDFromViewed
+                    });
+                }
+                catch (Exception)
+                {
+                    ///ToDo:
+                    ///Remover el permiso del codigo que fue rechazado
+                }
             }
         }
 
-        void Requests_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        private void Requests_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
             RaisePropertyChanged(() => FriendsRequests);
         }
 
-        void MyRequests_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        private void MyRequests_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
             RaisePropertyChanged(() => MyRequests);
         }

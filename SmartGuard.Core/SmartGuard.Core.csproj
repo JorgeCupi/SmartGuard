@@ -54,7 +54,6 @@
     <Compile Include="StaticClasses.cs" />
     <Compile Include="ViewModels\AboutViewModel.cs" />
     <Compile Include="ViewModels\BroadcastViewModel.cs" />
-    <Compile Include="ViewModels\FirstViewModel.cs" />
     <Compile Include="ViewModels\FriendAddViewModel.cs" />
     <Compile Include="ViewModels\FriendInfoViewModel.cs" />
     <Compile Include="ViewModels\FriendsViewModel.cs" />

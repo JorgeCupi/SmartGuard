@@ -24,15 +24,12 @@ namespace SmartGuard.Core.Azure.Authenticate
             string uri = string.Empty;
             if(maxValue>=0)
             {
-                string queryString = tableName + "()?$filter=" + keyName + "%20eq%20'" + keyValue + "'";
+                string queryString = String.Format("{0}()?$filter={1}%20eq%20'{2}'", tableName, keyName, keyValue);
                 if(maxValue>0)
-                    queryString = queryString + "&$top=" + maxValue;
-
-                uri = @"https://" + Utilities.azureAccount + ".table.core.windows.net/" + queryString;
+                    queryString = String.Format("{0}&$top={1}",queryString,maxValue);
+                uri = String.Format(@"https://{0}.table.core.windows.net/{1}",Utilities.azureAccount, queryString);
             }
-
-            else uri = @"https://" + Utilities.azureAccount + ".table.core.windows.net/" + tableName;
-
+            else uri = String.Format(@"https://{0}.table.core.windows.net/{1}",Utilities.azureAccount, tableName);
             return await Utilities.DownloadString(uri, tableName);
         }
 
@@ -40,18 +37,16 @@ namespace SmartGuard.Core.Azure.Authenticate
         {
             string uri = string.Empty;
             if (maxValue >= 0)
-            {
-                string queryString = tableName + "()?$filter=" + keyName + "%20eq%20'" + keyValue + "'%20and%20"+KeyNameTwo+ "%20eq%20" +KeyValueTwo;
+            { 
+                string queryString = String.Format("{0}()?$filter={1}%20eq%20'{2}'%20and%20{3}%20eq%20{4}",tableName,keyName,keyValue,KeyNameTwo,KeyValueTwo);
                 if (maxValue > 0)
-                    queryString = queryString + "&$top=" + maxValue;
-
-                uri = @"https://" + Utilities.azureAccount + ".table.core.windows.net/" + queryString;
+                    queryString = String.Format("{0}&$top={1}", queryString, maxValue);
+                uri = String.Format(@"https://{0}.table.core.windows.net/{1}", Utilities.azureAccount, queryString);
             }
-
-            else uri = @"https://" + Utilities.azureAccount + ".table.core.windows.net/" + tableName;
-
+            else uri = String.Format(@"https://{0}.table.core.windows.net/{1}",Utilities.azureAccount,tableName);
             return await Utilities.DownloadString(uri, tableName);
         }
+        
         public static async Task<bool> TryInsertEntityAsync(string uri, string tableName, dynamic entity)
         {
             string body = buildBodyForInsertOperation(entity);
@@ -65,6 +60,7 @@ namespace SmartGuard.Core.Azure.Authenticate
                 return true;
             else return false;
         }
+        
         public static async Task<bool> TryUpdateEntityAsync(string uri, string tableName, dynamic entity)
         {
             string body = buildBodyForUpdateOperation(entity, tableName);
@@ -76,7 +72,7 @@ namespace SmartGuard.Core.Azure.Authenticate
             StringContent stringContent = GetStringContent(body);
 
             HttpResponseMessage messageResult = await request.PutAsync(uri, stringContent);
-            string result = messageResult.StatusCode.ToString();
+            string result = messageResult.StatusCode.ToString();    
             if (result == "NoContent")
                 return true;
             else return false;
@@ -137,7 +133,7 @@ namespace SmartGuard.Core.Azure.Authenticate
             string formatedTime = DateTime.UtcNow.ToString("R", CultureInfo.InvariantCulture);
             request.DefaultRequestHeaders.Add("x-ms-date", formatedTime);
 
-            string authorization = Authentication.GetSignedString(formatedTime, tableName, Utilities.azureAccount, Utilities.azureKey,"GET","","");
+            string authorization = Authentication.GetSignedString(formatedTime,  tableName, Utilities.azureAccount, Utilities.azureKey,"GET","","");
             request.DefaultRequestHeaders.Add("Authorization", authorization);
 
             try

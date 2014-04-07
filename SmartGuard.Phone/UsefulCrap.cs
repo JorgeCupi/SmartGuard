@@ -166,7 +166,7 @@ namespace SmartGuard.Phone
             staticObjects.CurrentLatitude = position.Coordinate.Latitude;
             staticObjects.CurrentLongitude = position.Coordinate.Longitude;
             completed = await GetAddress(staticObjects.CurrentLatitude, staticObjects.CurrentLongitude);
-            return completed;
+            return completed;   
         }
 
         static void watcher_StatusChanged(Geolocator sender, StatusChangedEventArgs args)
@@ -246,6 +246,7 @@ namespace SmartGuard.Phone
             task.Show();
         }
     }
+
     #region Google's Reverse geocoding
     namespace GoogleReverseGeocoding
     {
@@ -321,6 +322,7 @@ namespace SmartGuard.Phone
         }
     }
     #endregion
+
     public static class Broadcast
     {
         public static async void TryUploadPosition(bool intenseMode)
@@ -348,7 +350,6 @@ namespace SmartGuard.Phone
                     MessageBox.Show(message, AppResources.BroadcastView_Title, MessageBoxButton.OK);
             }
             else MessageBox.Show(AppResources.LocationService_NoService, AppResources.LocationService_Title,MessageBoxButton.OK);
-            
         }
     }
 

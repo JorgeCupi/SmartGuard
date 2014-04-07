@@ -83,7 +83,6 @@ namespace Facebook.Methods
 
         public static List<FacebookUser> GetFriendsUsingTheApp(List<FacebookUser> data)
         {
-
             IEnumerable<FacebookUser> formatedList = from FacebookUser F in data
                                                      where F.UsesApp == true
                                                      orderby F.Name ascending

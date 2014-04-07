@@ -4,11 +4,10 @@ using SmartGuard.Core.Facebook.Authenticate;
 using SmartGuard.Core.Facebook.Classes;
 using SmartGuard.Core.Facebook.Queries;
 using SmartGuard.Core.Models;
-using System.Collections.Generic;
+using System.Collections.Generic;   
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace SmartGuard.Core.ViewModels
@@ -16,6 +15,7 @@ namespace SmartGuard.Core.ViewModels
     public class FriendsViewModel : MvxViewModel
     {
         private bool haventDownloaded;
+
         public bool HaventDownloaded
         {
             get { return haventDownloaded; }
@@ -23,6 +23,7 @@ namespace SmartGuard.Core.ViewModels
         }
 
         private bool downloadedError;
+
         public bool DownloadedError
         {
             get { return downloadedError; }
@@ -30,17 +31,19 @@ namespace SmartGuard.Core.ViewModels
         }
 
         private Friend selectedFriend;
+
         public Friend SelectedFriend
         {
             get { return selectedFriend; }
-            set { 
-                selectedFriend = value; 
+            set
+            {
+                selectedFriend = value;
                 RaisePropertyChanged(() => SelectedFriend);
                 StaticClasses.StaticFriend = SelectedFriend;
             }
         }
-        public ObservableCollection<Friend> Friends { get; set; }
 
+        public ObservableCollection<Friend> Friends { get; set; }
 
         public FriendsViewModel()
         {
@@ -52,12 +55,12 @@ namespace SmartGuard.Core.ViewModels
         private async void DownloadFriends()
         {
             HaventDownloaded = true;
-            List<Permission> permissions = await Queries.GetPermissionsForThisCode("PartitionKey",Utilities.fbUserID);
-            if (permissions!=null)
+            List<Permission> permissions = await Queries.GetPermissionsForThisCode("PartitionKey", Utilities.fbUserID);
+            if (permissions != null)
             {
                 foreach (Permission Allowed in permissions)
                 {
-                    if(Allowed.IsAllowed)
+                    if (Allowed.IsAllowed)
                     {
                         List<Position> positions = await Queries.GetPositionsForThisCode(Allowed.FBIDFromViewed, 1);
                         FacebookUser fbUser;
@@ -93,7 +96,7 @@ namespace SmartGuard.Core.ViewModels
         public ICommand TapOnFriend
         {
             get
-            { return new MvxCommand(() => ShowViewModel<FriendInfoViewModel>());}
+            { return new MvxCommand(() => ShowViewModel<FriendInfoViewModel>()); }
         }
 
         public ICommand GetDirections

@@ -13,14 +13,10 @@ namespace SmartGuard.Core.Facebook.Queries
         public static async Task<List<FacebookUser>> DownloadFriendsList()
         {
             HttpClient client = new HttpClient();
-            string result = await client.GetStringAsync(
-                    "https://graph.facebook.com/" +
-                    Utilities.fbUserID +
-                    "/friends?fields=" +
-                    "name," +
-                    "about," +
-                    "picture" +
-                    "&access_token=" + Utilities.fbToken);
+            string result = await client.GetStringAsync(String.Format(
+                    "https://graph.facebook.com/{0}/friends?fields=name,about,picture&access_token={1}",
+                    Utilities.fbUserID,
+                    Utilities.fbToken));
 
             FacebookData data = new FacebookData();
             data = JsonConvert.DeserializeObject<FacebookData>(result);
@@ -30,22 +26,18 @@ namespace SmartGuard.Core.Facebook.Queries
         public static async Task<FacebookUser> DownloadUserInfo(string fbID)
         {
             HttpClient client = new HttpClient();
-            string url = "https://graph.facebook.com/" +
-                    fbID +
-                    "?fields=" +
-                    "name," +
-                    "about," +
-                    "picture" +
-                    "&access_token=" + Utilities.fbToken;
             try
             {
-                string result = await client.GetStringAsync(new Uri(url, UriKind.Absolute));
-            FacebookUser data = new FacebookUser();
-            data = JsonConvert.DeserializeObject<FacebookUser>(result);
-            return data;
+                string result = await client.GetStringAsync(String.Format(
+                    "https://graph.facebook.com/{0}?fields=name,about,picture&access_token={1}",
+                    fbID , 
+                    Utilities.fbToken));
+                return JsonConvert.DeserializeObject<FacebookUser>(result);
             }
             catch (Exception)
             {
+                // The lines of code that called this method already have a way
+                // to work things out with this null value.
                 return null;
             }
         }

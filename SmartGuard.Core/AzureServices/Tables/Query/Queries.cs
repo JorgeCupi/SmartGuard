@@ -38,18 +38,10 @@ namespace SmartGuard.Core.Azure.Tables
                 return Utilities.TransformToPermissionList(result);
             else return null;
         }
-
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="partitionKey">City + Country</param>
-        /// <returns></returns>
         public static async Task<List<RedZone>> GetRedZonesForThisCode(string partitionKey)
         {
             string result = await Utilities.GetEntitiesAsync("RedZone","PartitionKey",partitionKey, 0);
             return Utilities.TransformToRedZoneList(result);
         }
-
     }
 }

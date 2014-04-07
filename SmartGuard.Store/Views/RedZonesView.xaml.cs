@@ -84,7 +84,9 @@ namespace SmartGuard.Store.Views
         {
             if (e.Action == 1)
             {
-                RedZone newRedZone = lstRedZones.Items.Last() as RedZone;
+                try
+                {
+                    RedZone newRedZone = lstRedZones.Items.Last() as RedZone;
                 layers = new MapLayer();
 
                 image = new BitmapImage();
@@ -103,6 +105,12 @@ namespace SmartGuard.Store.Views
                 MapLayer.SetPosition(ellipse, new Location(newRedZone.Latitude, newRedZone.Longitude));
 
                 myMap.Children.Add(layers);
+                }
+                catch (Exception)
+                {
+                    ///ToDo
+                    ///Remover la lista de usuarios que ya no se encuentran
+                }
             }
         }
 

@@ -101,14 +101,8 @@
     <Compile Include="Custom\LiveTileType3.xaml.cs">
       <DependentUpon>LiveTileType3.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Custom\LiveTileType4.xaml.cs">
-      <DependentUpon>LiveTileType4.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Custom\LiveTileType5.xaml.cs">
       <DependentUpon>LiveTileType5.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Custom\SmallTilePhoto.xaml.cs">
-      <DependentUpon>SmallTilePhoto.xaml</DependentUpon>
     </Compile>
     <Compile Include="DebugTrace.cs" />
     <Compile Include="Facebook.cs" />
@@ -181,15 +175,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Custom\LiveTileType4.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Custom\LiveTileType5.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Custom\SmallTilePhoto.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

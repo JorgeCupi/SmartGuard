@@ -1,10 +1,7 @@
 ﻿using SmartGuard.Core.Azure.Authenticate;
-using SmartGuard.Core.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+
 namespace SmartGuard.Core.Azure.Tables
 {
     public static partial class Queries
@@ -12,10 +9,10 @@ namespace SmartGuard.Core.Azure.Tables
         public static async Task<bool> TryInsertEntityAsync(string tableName, dynamic entity)
         {
             string uri = @"https://" + Utilities.azureAccount + ".table.core.windows.net/" + tableName;
-            return await Utilities.TryInsertEntityAsync(uri, tableName,entity);
+            return await Utilities.TryInsertEntityAsync(uri, tableName, entity);
         }
 
-        public static async Task<bool> TryUpdateEntityAsync(string tableName, dynamic entity,string partitionKey,string rowKey)
+        public static async Task<bool> TryUpdateEntityAsync(string tableName, dynamic entity, string partitionKey, string rowKey)
         {
             string uri = @"https://{0}.table.core.windows.net/{1}(PartitionKey='{2}',RowKey='{3}')";
             uri = String.Format(uri, Utilities.azureAccount, tableName, partitionKey, rowKey);

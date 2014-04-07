@@ -5,7 +5,6 @@ using System.Net;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
-using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Cirrious.MvvmCross.WindowsPhone.Views;
 using System.Windows.Input;
@@ -108,7 +107,7 @@ namespace SmartGuard.Phone.Views
             else TileBroadcast.Message = AppResources.MainView_Tile_BroadcastMessage_IntenseEnabled;
         }
 
-        async void TileFacebook_Tap(object sender, System.Windows.Input.GestureEventArgs e)
+        async void TileFacebook_Tap(object sender, GestureEventArgs e)
         {
             if (App.isAuthenticated)
             {
@@ -128,11 +127,14 @@ namespace SmartGuard.Phone.Views
             {
                 string result = await FacebookMethods.LogIn();
                 if (result == "OK")
-                    MessageBox.Show(AppResources.Facebook_LogIn_Success, AppResources.ApplicationTitle, MessageBoxButton.OK);
+                    MessageBox.Show(AppResources.Facebook_LogIn_Success, 
+                        AppResources.ApplicationTitle, 
+                        MessageBoxButton.OK);
 
-                else MessageBox.Show(AppResources.Facebook_LogIn_Error, AppResources.ApplicationTitle, MessageBoxButton.OK);
+                else MessageBox.Show(AppResources.Facebook_LogIn_Error, 
+                    AppResources.ApplicationTitle, 
+                    MessageBoxButton.OK);
             }
-
             CheckAuthentication();
         }
 

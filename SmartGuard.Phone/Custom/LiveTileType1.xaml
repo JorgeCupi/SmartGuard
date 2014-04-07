@@ -10,7 +10,6 @@
     xmlns:local="using:SampleCustomLiveTiles">
 
     <UserControl.Resources>
-
         <Storyboard x:Key="liveTileAnimTop1_Part1" 
                     x:Name="liveTileAnimTop1_Part1" Completed="liveTileAnimTop1_Part1_Completed">
             <DoubleAnimation
